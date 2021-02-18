@@ -2,7 +2,7 @@ resources:
   - name: myGitRepo
     type: GitRepo
     configuration:
-      gitProvider: my_github
+      gitProvider: github
       path: batelt/gs-spring-boot-docker
       branches:
         include: master
@@ -74,7 +74,7 @@ pipelines:
             - name: step_3
             - name: step_4
           integrations:
-            - name: my_github
+            - name: github
         execution:
           onExecute:
-            - 'curl -H "Authorization: token ${int_my_github_token}" ${int_my_github_url}/rate_limit'
+            - 'curl -H "Authorization: token ${int_github_token}" ${int_github_url}/rate_limit'
