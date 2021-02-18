@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: github
-      path: batelt/gs-spring-boot-docker
+      path: venkatr4/gs-spring-boot-docker
       branches:
         include: master
   - name: myBuildInfo
